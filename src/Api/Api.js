@@ -18,7 +18,7 @@ const getMoviesDay = async () => {
 };
 
 const getMoviesQuery = async query => {
-  const data = await axios.get(`search/movie/${query}?api_key=${APIKEY}`);
+  const data = await axios.get(`search/movie?api_key=${APIKEY}&query=${query}`);
   return data;
 };
 
