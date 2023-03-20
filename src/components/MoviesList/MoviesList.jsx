@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const MoviesList = ({ data }) => {
-  console.log(data);
   return (
     <div className="movies">
       <ul>

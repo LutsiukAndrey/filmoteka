@@ -1,7 +1,9 @@
-import { Cast } from 'components/Cast';
-import { Reviews } from 'components/Reviews';
 import { nanoid } from 'nanoid';
+import { Link, Outlet } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 export const MovieCard = ({ movie }) => {
+  const { movieId } = useParams();
   const {
     poster_path,
     original_title,
@@ -28,8 +30,11 @@ export const MovieCard = ({ movie }) => {
             })
           : ''}
       </ul>
-      <Cast />
-      <Reviews />
+      <>
+        <Link to={`/movies/${movieId}/cast`}> Cast</Link>
+        <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+      </>
+      <Outlet />
     </div>
   );
 };

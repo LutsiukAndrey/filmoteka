@@ -17,6 +17,8 @@ export const MovieDetails = () => {
       // console.log(movie);
       fetchMovies();
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   console.log(movie);
 

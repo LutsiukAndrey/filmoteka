@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 import { NavBar } from 'components/Navbar';
 import api from 'Api/Api';
 import { MoviesList } from 'components/MoviesList';
+import { useLocation } from 'react-router-dom';
 export const Movies = () => {
+  const location = useLocation();
+  console.log(location);
   const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
   useEffect(() => {

@@ -4,6 +4,8 @@ import api from 'Api/Api';
 import { MoviesList } from 'components/MoviesList';
 
 export const Home = () => {
+  const location = useLocation();
+  console.log({ from: location });
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
