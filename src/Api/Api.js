@@ -28,7 +28,7 @@ const getMoviesInfo = async id => {
 };
 
 const getMoviesCast = async abc => {
-  const data = await axios.get(`${abc}?api_key=${APIKEY}`);
+  const data = await axios.get(`/movie/${abc}/credits?api_key=${APIKEY}`);
   return data;
 };
 

@@ -20,7 +20,6 @@ export const MovieDetails = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(movie);
 
   return <MovieCard movie={movie} />;
 };

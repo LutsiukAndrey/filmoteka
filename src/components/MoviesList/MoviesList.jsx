@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { getMoveiDetaisPage } from 'routes';
 
 export const MoviesList = ({ data }) => {
   return (
@@ -7,7 +8,7 @@ export const MoviesList = ({ data }) => {
         {data.map(({ original_title, id }) => {
           return (
             <li key={id}>
-              <Link to={`movies/${id}`}>{original_title}</Link>
+              <Link to={getMoveiDetaisPage(id)}>{original_title}</Link>
             </li>
           );
         })}
