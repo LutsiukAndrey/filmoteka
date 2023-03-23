@@ -7,11 +7,7 @@ export const MovieCard = ({ movie }) => {
   const { cast, reviews, movies } = routes;
   const navigator = useNavigate();
   const { movieId } = useParams();
-  // const addToFavorit = () => {
-  //   console.log(movieId);
-  //   const favoritrMovie =
-  //   localStorage.setItem('favoritMovie', [movieId]);
-  // };
+
   const {
     poster_path,
     original_title,
@@ -20,6 +16,7 @@ export const MovieCard = ({ movie }) => {
     release_date,
     vote_average,
   } = movie;
+
   return (
     <>
       <button
@@ -29,14 +26,16 @@ export const MovieCard = ({ movie }) => {
       >
         Go back
       </button>
-      {/* <button onClick={addToFavorit}>Add to favorit</button> */}
       <MovieVraper>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-          alt=""
-          width="350"
-        />
-
+        {poster_path ? (
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt=""
+            width="350"
+          />
+        ) : (
+          ''
+        )}
         <h2>
           {original_title} ({new Date(release_date).getFullYear()})
         </h2>

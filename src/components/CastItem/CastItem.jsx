@@ -5,11 +5,15 @@ export const CastItem = ({ data }) => {
         return (
           <li key={cast_id}>
             <h3>{name}</h3>
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
-              alt={name}
-              width="150"
-            />
+            {profile_path ? (
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+                alt={name}
+                width="150"
+              />
+            ) : (
+              ''
+            )}
           </li>
         );
       })}

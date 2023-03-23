@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 export const Reviews = () => {
   const { movieId } = useParams();
 
-  console.log(movieId);
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -15,6 +14,5 @@ export const Reviews = () => {
     };
     fetchReviews();
   }, []);
-  console.log(reviews);
   return <ReviewsItem data={reviews} />;
 };

@@ -1,6 +1,5 @@
 import { nanoid } from 'nanoid';
 export const ReviewsItem = ({ data }) => {
-  console.log(data);
   return (
     <ul>
       {data.length > 0

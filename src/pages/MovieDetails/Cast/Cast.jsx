@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 export const Cast = () => {
   const { movieId } = useParams();
 
-  console.log(movieId);
   const [castDescription, setcastDescription] = useState([]);
 
   useEffect(() => {
@@ -15,6 +14,5 @@ export const Cast = () => {
     };
     fetchCast();
   }, []);
-  // console.log(castDescription);
   return <CastItem data={castDescription} />;
 };

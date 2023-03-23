@@ -14,7 +14,6 @@ export const MovieDetails = () => {
       setMovie(result.data);
     };
     if (movieId) {
-      // console.log(movie);
       fetchMovies();
     }
 
