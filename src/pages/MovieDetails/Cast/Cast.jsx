@@ -13,6 +13,6 @@ export const Cast = () => {
       setcastDescription(result.data.cast);
     };
     fetchCast();
-  }, []);
+  }, [movieId]);
   return <CastItem data={castDescription} />;
 };

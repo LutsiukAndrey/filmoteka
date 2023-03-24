@@ -13,6 +13,6 @@ export const Reviews = () => {
       setReviews(result.data.results);
     };
     fetchReviews();
-  }, []);
+  }, [movieId]);
   return <ReviewsItem data={reviews} />;
 };
