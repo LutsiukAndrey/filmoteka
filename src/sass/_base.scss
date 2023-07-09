@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&family=Work+Sans:ital,wght@0,300;0,700;1,500&display=swap');
+html {
+  font-family: 'Archivo', sans-serif;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  word-wrap: normal;
+  color: $mainTextColor;
+  scroll-behavior: smooth;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  z-index: 2;
+  position: relative;
+
+  // background-color: $mainBgColor;
+
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-weight: 400;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  // background-color: #f7f;
+  font-family: 'Ultra';
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  // font-family: 'Archivo', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}

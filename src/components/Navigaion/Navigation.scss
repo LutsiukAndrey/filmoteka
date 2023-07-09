@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.header {
+  background-color: $mainBgColor;
+
+  padding: 20px;
+  &-link {
+    color: $mainTextColor;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

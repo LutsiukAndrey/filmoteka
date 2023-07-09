@@ -1,0 +1,25 @@
+/*
+  This mixin can be used to set the font-size and line-height in percents:
+  @include font-size(fontSize, lineHeight);
+*/
+.card {
+  text-align: center;
+  background-color: #586f7c;
+}
+.card-back-btn {
+  margin: 40px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: transparent;
+  box-shadow: -2px 2px rgba(238, 238, 238, 0.3137254902);
+}
+.card-img {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=MovieCard.css.map */

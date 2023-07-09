@@ -1,0 +1,11 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+
+.hero {
+  text-align: center;
+  background-color: $mainBgColor;
+  &-title {
+    color: $mainTextColor;
+    font-size: 60px;
+  }
+}

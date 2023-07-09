@@ -1,0 +1,19 @@
+/*
+  This mixin can be used to set the font-size and line-height in percents:
+  @include font-size(fontSize, lineHeight);
+*/
+.movies {
+  background-color: #586f7c;
+}
+.movies-title {
+  margin-bottom: 50px;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.4em;
+}
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}/*# sourceMappingURL=MoviesList.css.map */

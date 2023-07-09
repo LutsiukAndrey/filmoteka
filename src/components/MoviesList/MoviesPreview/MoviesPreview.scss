@@ -1,0 +1,32 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.preview {
+  justify-content: space-between;
+  display: flex;
+  max-width: 320px;
+  flex-direction: column;
+  @include tablet {
+    width: 340px;
+  }
+  @include desktop {
+    width: 230px;
+  }
+  //   color: $mainTextColor;
+  &-img {
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  &-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &-bottom {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+}

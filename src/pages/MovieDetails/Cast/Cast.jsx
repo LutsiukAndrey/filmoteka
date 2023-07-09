@@ -1,3 +1,4 @@
+import './Cast.scss';
 import api from 'Api/Api';
 import { CastItem } from 'components/CastItem/CastItem';
 import { useEffect, useState } from 'react';
@@ -14,5 +15,11 @@ export const Cast = () => {
     };
     fetchCast();
   }, [movieId]);
-  return <CastItem data={castDescription} />;
+  return (
+    <ul className="casts">
+      {castDescription.map(data => {
+        return <CastItem data={data} />;
+      })}
+    </ul>
+  );
 };

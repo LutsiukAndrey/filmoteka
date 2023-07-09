@@ -1,3 +1,5 @@
+import './Movies.scss';
+
 import { useState, useEffect } from 'react';
 import { NavBar } from 'components/Navbar';
 import api from 'Api/Api';
@@ -30,9 +32,9 @@ export const Movies = () => {
   };
 
   return (
-    <>
+    <div className="moviesPage ">
       <NavBar submit={handleSubmit} />
       {movies.length > 0 ? <MoviesList data={movies} /> : <></>}
-    </>
+    </div>
   );
 };

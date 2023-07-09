@@ -1,22 +1,24 @@
+import './CastItem.scss';
+
 export const CastItem = ({ data }) => {
+  const { name, cast_id, profile_path } = data;
   return (
-    <ul>
-      {data.map(({ name, cast_id, profile_path }) => {
-        return (
-          <li key={cast_id}>
-            <h3>{name}</h3>
-            {profile_path ? (
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
-                alt={name}
-                width="150"
-              />
-            ) : (
-              ''
-            )}
-          </li>
-        );
-      })}
-    </ul>
+    <a
+      target="_blank"
+      href={`https://www.google.com/search?q=${name}`}
+      rel="noreferrer"
+    >
+      <li key={cast_id} className="cast-item">
+        {profile_path && (
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+            alt={name}
+            // width="150"
+            className="cast-item-img"
+          />
+        )}
+        <h3 className="cast-item-name">{name}</h3>
+      </li>
+    </a>
   );
 };

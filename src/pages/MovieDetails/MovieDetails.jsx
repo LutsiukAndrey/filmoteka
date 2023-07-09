@@ -1,3 +1,5 @@
+import './MovieDetails.scss';
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -20,5 +22,9 @@ export const MovieDetails = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <MovieCard movie={movie} />;
+  return (
+    <div className="movies-datails">
+      <MovieCard movie={movie} />;
+    </div>
+  );
 };

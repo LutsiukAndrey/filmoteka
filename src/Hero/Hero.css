@@ -1,0 +1,12 @@
+/*
+  This mixin can be used to set the font-size and line-height in percents:
+  @include font-size(fontSize, lineHeight);
+*/
+.hero {
+  text-align: center;
+  background-color: #000;
+}
+.hero-title {
+  color: #fff;
+  font-size: 60px;
+}/*# sourceMappingURL=Hero.css.map */

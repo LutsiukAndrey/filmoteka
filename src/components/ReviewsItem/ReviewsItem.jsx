@@ -1,26 +1,22 @@
-import { nanoid } from 'nanoid';
+import './ReviewsItem.scss';
+
 export const ReviewsItem = ({ data }) => {
+  const { author, content, author_details } = data;
   return (
-    <ul>
-      {data.length > 0
-        ? data.map(({ author, content, author_details }) => {
-            return (
-              <li key={nanoid()}>
-                {author_details.avatar_path ? (
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500/${author_details.avatar_path}`}
-                    alt={author}
-                    width="150"
-                  />
-                ) : (
-                  ''
-                )}
-                <h3>{author}</h3>
-                <p>{content}</p>
-              </li>
-            );
-          })
-        : "We dont't have any reviews for this movie"}
-    </ul>
+    <li className="review-item">
+      <h3 className="review-item-author">{author}</h3>
+      <div className="review-item-content">
+        {author_details.avatar_path ? (
+          <img
+            className="review-item-content-img"
+            src={`https://image.tmdb.org/t/p/w500/${author_details.avatar_path}`}
+            alt={author}
+          />
+        ) : (
+          ''
+        )}
+        <p>{content}</p>
+      </div>
+    </li>
   );
 };

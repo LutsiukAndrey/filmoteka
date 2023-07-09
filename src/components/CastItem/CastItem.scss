@@ -1,0 +1,21 @@
+@import '../../sass/mixins';
+@import '../../sass/variables';
+
+.cast-item {
+  //   width: calc((100% - 20px) / 7);
+  width: 130px;
+
+  @include tablet {
+    width: 230px;
+  }
+  @include desktop {
+    width: 210px;
+  }
+  &-img {
+    // width: 200px;
+    margin-bottom: 20px;
+  }
+  &-name {
+    text-align: center;
+  }
+}

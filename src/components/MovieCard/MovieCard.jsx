@@ -1,7 +1,13 @@
+import './MovieCard.scss';
 import { nanoid } from 'nanoid';
-import { Link, Outlet, useParams, useNavigate } from 'react-router-dom';
+import {
+  Link,
+  Outlet,
+  useParams,
+  useNavigate,
+  NavLink,
+} from 'react-router-dom';
 import { routes } from 'routes';
-import { MovieVraper } from './MovieCard.styled';
 
 export const MovieCard = ({ movie }) => {
   const { cast, reviews, movies } = routes;
@@ -19,45 +25,56 @@ export const MovieCard = ({ movie }) => {
 
   return (
     <>
-      <button
-        onClick={() => {
-          navigator(-1);
-        }}
-      >
-        Go back
-      </button>
-      <MovieVraper>
-        {poster_path ? (
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-            alt=""
-            width="350"
-          />
-        ) : (
-          ''
-        )}
-        <h2>
+      <div className="card">
+        <button
+          className="card-back-btn"
+          onClick={() => {
+            navigator(-1);
+          }}
+        >
+          Go back
+        </button>
+        <h2 className="card-title">
           {original_title} ({new Date(release_date).getFullYear()})
         </h2>
-        <p>User score : {vote_average}</p>
-        <h2>Overviwe</h2>
-        <p>{overview}</p>
-        <h2>Genres</h2>
-        <ul>
-          {genres
-            ? genres.map(e => {
-                return <li key={nanoid()}>{e.name}</li>;
-              })
-            : ''}
-        </ul>
-      </MovieVraper>
-      <>
-        <Link to={`${movies}/${movieId}/${cast}`}>Cast</Link>
-        <Link to={`${movies}/${movieId}/${reviews}`} id={movieId}>
+        <div className="card-wraper">
+          <div className="card-image-wraper">
+            {poster_path && (
+              <img
+                className="card-img"
+                src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+                alt=""
+              />
+            )}
+          </div>
+          <div className="card-text-wraper">
+            <p>User score : {vote_average}</p>
+            <h2>Overviwe</h2>
+            <p>{overview}</p>
+            <h2>Genres</h2>
+            <ul>
+              {genres
+                ? genres.map(e => {
+                    return <li key={nanoid()}>{e.name}</li>;
+                  })
+                : ''}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="card-nav">
+        <NavLink to={`${movies}/${movieId}/${cast}`} className="card-nav-link">
+          Cast
+        </NavLink>
+        <NavLink
+          to={`${movies}/${movieId}/${reviews}`}
+          className="card-nav-link"
+          id={movieId}
+        >
           Reviews
-        </Link>
-        <Outlet />
-      </>
+        </NavLink>
+      </div>
+      <Outlet />
     </>
   );
 };

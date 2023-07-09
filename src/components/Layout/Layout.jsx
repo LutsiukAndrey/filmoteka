@@ -1,3 +1,18 @@
-export const Layout = () => {
-  return <p>Layout</p>;
-};
+import React, { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import { Container } from 'components/Container/Container';
+import { Navigaion } from 'components/Navigaion/Navigation';
+
+export default function Layout() {
+  return (
+    <>
+      <Navigaion />
+      <Container>
+        <Suspense fallback={<h1>Loading</h1>}>
+          <Outlet />
+        </Suspense>
+      </Container>
+    </>
+  );
+}

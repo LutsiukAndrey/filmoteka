@@ -1,0 +1,11 @@
+@import '../../../sass/mixins';
+@import '../../../sass/variables';
+
+.casts {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  //   width: calc(100% - 10px);
+}

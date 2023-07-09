@@ -1,16 +1,14 @@
-import { Link } from 'react-router-dom';
-import { getMoveiDetaisPage } from 'routes';
+import './MoviesList.scss';
+
+import { MoviesPreview } from './MoviesPreview/MoviesPreview';
 
 export const MoviesList = ({ data }) => {
   return (
-    <div className="movies">
-      <ul>
-        {data.map(({ original_title, id }) => {
-          return (
-            <li key={id}>
-              <Link to={getMoveiDetaisPage(id)}>{original_title}</Link>
-            </li>
-          );
+    <div className="movies section">
+      <h2 className="movies-title">Newest</h2>
+      <ul className="movies-list">
+        {data.map(item => {
+          return <MoviesPreview data={item} />;
         })}
       </ul>
     </div>

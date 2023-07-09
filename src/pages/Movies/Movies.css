@@ -1,0 +1,7 @@
+/*
+  This mixin can be used to set the font-size and line-height in percents:
+  @include font-size(fontSize, lineHeight);
+*/
+.moviesPage {
+  background-color: #586f7c;
+}/*# sourceMappingURL=Movies.css.map */
