@@ -1,0 +1,56 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.search {
+  padding: 40px 20px 0;
+
+  @include tablet {
+    padding: 50px 50px 0;
+  }
+  @include desktop {
+    padding: 100px 100px 0;
+  }
+
+  &_form {
+    position: relative;
+    &-input {
+      box-shadow: -2px 2px #eeeeee50;
+
+      font-weight: 700;
+      width: 100%;
+      //   width: 300px;
+      padding: 10px;
+
+      border: transparent;
+      border-radius: 20px;
+
+      @include tablet {
+        margin-right: 40px;
+        padding: 10px;
+        width: 300px;
+      }
+    }
+
+    &-btn {
+      //
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      //
+      width: 100px;
+      text-align: center;
+      //   margin-bottom: 20px;
+      background-color: $mainBgColor;
+      color: $mainTextColor;
+      font-weight: 700;
+      padding: 10px 0px;
+      border-radius: 40px;
+      border: transparent;
+      //   border: transparent;
+      @include tablet {
+        box-shadow: -2px 2px #eeeeee50;
+        position: static;
+      }
+    }
+  }
+}

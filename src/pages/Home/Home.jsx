@@ -1,3 +1,5 @@
+import './Home.scss';
+
 import React, { useEffect, useState } from 'react';
 import api from 'Api/Api';
 import { MoviesList } from 'components/MoviesList';
@@ -15,7 +17,7 @@ export const Home = () => {
     fetchMovies();
   }, []);
   return (
-    <div>
+    <div className="home">
       <Hero />
       <MoviesList data={movies} />
     </div>

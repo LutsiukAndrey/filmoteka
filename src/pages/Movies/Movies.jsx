@@ -1,7 +1,7 @@
 import './Movies.scss';
 
 import { useState, useEffect } from 'react';
-import { NavBar } from 'components/Navbar';
+import { SearchBar } from 'components/SearchBar';
 import api from 'Api/Api';
 import { MoviesList } from 'components/MoviesList';
 import { useSearchParams } from 'react-router-dom';
@@ -33,7 +33,7 @@ export const Movies = () => {
 
   return (
     <div className="moviesPage ">
-      <NavBar submit={handleSubmit} />
+      <SearchBar submit={handleSubmit} />
       {movies.length > 0 ? <MoviesList data={movies} /> : <></>}
     </div>
   );

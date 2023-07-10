@@ -1,7 +1,11 @@
 import './CastItem.scss';
 
+import manNotFound from './notFound/manNotFound.png';
+import womanNotFound from './notFound/womanNotFound.png';
+
 export const CastItem = ({ data }) => {
-  const { name, cast_id, profile_path } = data;
+  const { name, cast_id, profile_path, gender } = data;
+
   return (
     <a
       target="_blank"
@@ -9,11 +13,16 @@ export const CastItem = ({ data }) => {
       rel="noreferrer"
     >
       <li key={cast_id} className="cast-item">
-        {profile_path && (
+        {(profile_path && (
           <img
             src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
             alt={name}
-            // width="150"
+            className="cast-item-img"
+          />
+        )) || (
+          <img
+            src={gender === 2 ? manNotFound : womanNotFound}
+            alt={name}
             className="cast-item-img"
           />
         )}

@@ -12,10 +12,12 @@
     width: 210px;
   }
   &-img {
-    // width: 200px;
+    width: 100%;
+    border-radius: 15px;
     margin-bottom: 20px;
   }
   &-name {
     text-align: center;
+    color: #fff;
   }
 }
