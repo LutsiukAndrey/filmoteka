@@ -2,13 +2,13 @@
 @import '../../sass/mixins';
 
 .search {
-  padding: 40px 20px 0;
+  padding: 40px 20px;
 
   @include tablet {
-    padding: 50px 50px 0;
+    padding: 50px 50px;
   }
   @include desktop {
-    padding: 100px 100px 0;
+    padding: 100px 100px;
   }
 
   &_form {

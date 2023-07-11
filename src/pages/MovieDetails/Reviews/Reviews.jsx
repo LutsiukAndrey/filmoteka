@@ -15,7 +15,7 @@ export const Reviews = () => {
     };
     fetchReviews();
   }, [movieId]);
-  console.log(reviews);
+
   return (
     <ul>
       {reviews.length > 0

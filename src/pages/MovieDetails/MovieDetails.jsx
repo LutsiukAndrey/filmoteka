@@ -24,7 +24,7 @@ export const MovieDetails = () => {
 
   return (
     <div className="movies-datails">
-      <MovieCard movie={movie} />;
+      <MovieCard movie={movie} />
     </div>
   );
 };

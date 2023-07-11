@@ -2,9 +2,9 @@
 @import '../../../sass/mixins';
 
 .preview {
-  justify-content: space-between;
   display: flex;
   max-width: 320px;
+  justify-content: space-between;
   flex-direction: column;
   @include tablet {
     width: 340px;
@@ -15,7 +15,8 @@
   //   color: $mainTextColor;
   &-img {
     border-radius: 15px;
-    margin-bottom: 15px;
+
+    margin: 0 auto 15px;
   }
   &-title {
     text-align: center;

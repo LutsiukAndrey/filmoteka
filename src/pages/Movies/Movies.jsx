@@ -5,17 +5,26 @@ import { SearchBar } from 'components/SearchBar';
 import api from 'Api/Api';
 import { MoviesList } from 'components/MoviesList';
 import { useSearchParams } from 'react-router-dom';
+import { Notifycation } from 'components/Alert/Notifycation';
 
 export const Movies = () => {
   const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
-  // eslint-disable-next-line no-unused-vars
+
   const [searchParams, setSearchParams] = useSearchParams();
   const searchValue = searchParams.get('q');
+
+  const [showNotification, setShowNotification] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   useEffect(() => {
     const fetchMovies = async () => {
       const result = await api.getMoviesQuery(value);
       setMovies(result.data.results);
+      if (result.data.results.length === 0) {
+        console.log('dafadsf');
+        setErrorMessage('Movies not found');
+        setShowNotification(true);
+      }
     };
     if (searchValue) {
       setValue(searchValue);
@@ -28,11 +37,23 @@ export const Movies = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setValue({ q: e.target.searchfield.value });
+    const { value } = e.target.searchfield;
+
+    if (!value) {
+      setErrorMessage('Please, enter something');
+      setShowNotification(true);
+      return;
+    }
+    setValue({ q: value });
   };
 
   return (
     <div className="moviesPage ">
+      <Notifycation
+        showNotification={showNotification}
+        errorMessage={errorMessage}
+        setShowNotification={setShowNotification}
+      />
       <SearchBar submit={handleSubmit} />
       {movies.length > 0 ? <MoviesList data={movies} /> : <></>}
     </div>

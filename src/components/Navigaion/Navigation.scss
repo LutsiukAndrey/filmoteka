@@ -5,6 +5,8 @@
   background-color: $mainBgColor;
 
   padding: 20px;
+  // position: absolute;
+
   &-link {
     color: $mainTextColor;
     &:not(:last-child) {
