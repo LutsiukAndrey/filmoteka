@@ -26,4 +26,4 @@ Any changes you make to the source code will be automatically reflected in the b
 
 ## Contribution
 
-Contributions to this project are welcome! If you have any suggestions, bug reports, or feature requests, please feel free to [open an issue](https://github.com/LutsiukAndrey/folmoteka/issues) or submit a pull request.
+Contributions to this project are welcome! If you have any suggestions, bug reports, or feature requests, please feel free to [open an issue](https://github.com//LutsiukAndrey/filmoteka/issues) or submit a pull request.
