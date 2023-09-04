@@ -1,12 +1,6 @@
 import './MovieCard.scss';
 import { nanoid } from 'nanoid';
-import {
-  Link,
-  Outlet,
-  useParams,
-  useNavigate,
-  NavLink,
-} from 'react-router-dom';
+import { Outlet, useParams, useNavigate, NavLink } from 'react-router-dom';
 import { routes } from 'routes';
 
 export const MovieCard = ({ movie }) => {

@@ -1,4 +1,4 @@
-import { Alert, Box, CircularProgress, Snackbar } from '@mui/material';
+import { Alert, Snackbar } from '@mui/material';
 
 export const Notifycation = ({
   showNotification,

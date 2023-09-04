@@ -11,6 +11,7 @@ export const Movies = () => {
   const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
 
+  // eslint-disable-next-line no-unused-vars
   const [searchParams, setSearchParams] = useSearchParams();
   const searchValue = searchParams.get('q');
 
