@@ -20,6 +20,13 @@ export const Home = () => {
     <div className="home">
       <Hero />
       <MoviesList data={movies} />
+<div>
+    <a href="https://www.instagram.com/">MDN</a>
+    <a href="https://www.youtube.com/watch?v=CEzacaCUDqU">MDN</a>
+
+  
+
+</div>
     </div>
   );
 };
